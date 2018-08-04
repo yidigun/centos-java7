@@ -22,7 +22,8 @@ RUN yum -y install libX11 libXext libXi libXrender libXtst alsa-lib && \
        jre/lib/amd64/libjavafx*.so \
        jre/lib/amd64/libjfx*.so \
        jre/lib/amd64/libgstplugins-lite.so \
-       jre/lib/amd64/libgstreamer-lite.so)
+       jre/lib/amd64/libgstreamer-lite.so) && \
+    yum -y clean all
 
 ENV JAVA_HOME /opt/oracle/java
 ENV PATH ${PATH}:${JAVA_HOME}/bin
